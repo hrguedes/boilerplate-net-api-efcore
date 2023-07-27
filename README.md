@@ -1,1 +1,1 @@
-# boilerplate-net-api-efcore
+# boilerplate-net-api
