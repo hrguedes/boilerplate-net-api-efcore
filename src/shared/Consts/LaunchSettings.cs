@@ -3,8 +3,7 @@
 public static class LaunchSettings
 {
     #region Mongo DB
-    public static string ConnectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRING") ?? "SET_HERE_LOCAL_DEVELOPMENT";
-    public static string Database = "BOILERPLATEPROJECT";
+    public static string ConnectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING") ?? "SET_HERE_LOCAL_DEVELOPMENT";
     #endregion
 
     #region Redis
