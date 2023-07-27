@@ -2,7 +2,7 @@
 
 public static class LaunchSettings
 {
-    #region Mongo DB
+    #region SQL Server DB
     public static string ConnectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING") ?? "SET_HERE_LOCAL_DEVELOPMENT";
     #endregion
 
