@@ -44,4 +44,24 @@ public class CompanyController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpGet("all")]
+    [ProducesResponseType(typeof(ReturnOk<List<CompanyResponse>>), 200)]
+    [ProducesResponseType(typeof(ReturnOk<List<CompanyResponse>>), 400)]
+    [ProducesResponseType(typeof(string), 500)]
+    public async Task<IActionResult> GetAllCompanies(
+        [FromServices] ICompanyService company
+    )
+    {
+        try
+        {
+            var resp = await company.GetAllCompanies();
+            return StatusCode(resp.StatusCode, resp);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(500, e.Message);
+        }
+    }
+
 }
